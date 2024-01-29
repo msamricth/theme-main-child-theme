@@ -1,4 +1,19 @@
 {
+  "name": "theme-main-child",
+  "version": "0.5.0",
+  "license": "GPL-2.0",
+  "author": "Emm Talarico",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msamricth/theme-main"
+  },
+  "scripts": {
+    "watch": "webpack serve && wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "devDependencies": {
     "css-loader": "^6.9.1",
     "node-sass": "^9.0.0",
