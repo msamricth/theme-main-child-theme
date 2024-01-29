@@ -14,7 +14,6 @@ module.exports = {
 			client: {
 				overlay: false,
 			},
-			allowedHosts: ['sandbox.local'],
 			hot: false,
 			compress: true,
 			devMiddleware: {
