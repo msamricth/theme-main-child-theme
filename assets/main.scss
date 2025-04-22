@@ -76,4 +76,5 @@ $theme-colors: (
 @import '../../theme-main/child-theme/child-theme';
 
 
-@import 'scss/custom'; //your child theme styles
+@import 'scss/custom'; 
+@import 'scss/about'; 

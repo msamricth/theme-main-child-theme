@@ -107,8 +107,12 @@ $offsetWidthLG: 52px;
 $offsetWidthDLG: 72px;
 $offsetWidthXL: 84px;
 $offsetWidthXXL: 100px;
+$offsetWidth2XL: 106px;
 $offsetWidth3XL: 136px;
 $offsetWidth4xl: 172px;
 
 $nav-link-transition: opacity .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $link-decoration: none;
+
+$navTransitionDuration: 0.6s;
+$navDropdownTransitionDuration: 0.25s;

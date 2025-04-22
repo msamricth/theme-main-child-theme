@@ -34,3 +34,37 @@ function dequeue_parent_theme_styles() {
     wp_deregister_style('main');
 }
 add_action('wp_enqueue_scripts', 'dequeue_parent_theme_styles', 20);
+
+
+
+/**
+ * Add inline styles to the <head> section of the child theme, this is just for the first few things so they load fast while the rest of the assets load
+ */
+function add_custom_inline_styles_to_head() {
+    // Define your custom inline styles here
+    $custom_styles = '
+    .hero-title {
+        font-weight: 700;
+        font-style: italic;
+        --theme-main-animation-delay: 0.6s;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    ';
+
+    // Output the custom styles inside <style> tags
+    echo '<style type="text/css">' . $custom_styles . '</style>';
+}
+
+// Hook the function into the wp_head action
+add_action('wp_head', 'add_custom_inline_styles_to_head', 1);
+
+function preloadGoogleFonts() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&display=swap" rel="stylesheet">';
+}
+
+// Hook the function into the wp_head action
+add_action('wp_head', 'preloadGoogleFonts', 1);
+
+
